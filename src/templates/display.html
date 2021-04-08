@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+    <!-- <ul>
+    {% for element in elements %}
+        <li>{{ element }}</li>
+    {% endfor %}
+    </ul> -->
+    <table>
+        <thead style="border: 1px solid black;">
+        <tr>
+            <!-- <th>Item name</th>
+            <th>price</th>
+            <th>quantity</th> -->
+            {% for key in elements[0].keys() %}
+            <th>{{key}}</th>
+            {% endfor %}
+        </tr>
+        </thead>
+        <tbody>
+        {% for book in elements %}
+        <tr>
+            {% for key in elements[0].keys() %}
+            <td>{{ book[key]}}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

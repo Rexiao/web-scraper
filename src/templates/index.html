@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method="post">
+    <label for="title">Please enter book_id</label>
+    <input name="book_id" id="book_id" type="number" required>
+    <input type="submit" value="submit">
+</form>
+<form method="post">
+    <label for="title">Please enter author_id</label>
+    <input name="author_id" id="author_id" type="number" required>
+    <input type="submit" value="submit">
+</form>
+<a href="http://127.0.0.1:5000/query/most-book-authors">most-book-authors</a>
+<br>
+<a href="http://127.0.0.1:5000/query/most-similar-books">most-similar-books</a>
+<br>
+<a href="http://127.0.0.1:5000/vis/rank-books">rank-books</a>
+<br>
+<a href="http://127.0.0.1:5000/vis/rank-authors">rank-authors</a>
+<br>
+<a href="http://127.0.0.1:5000/books">all books</a>
+<br>
+<a href="http://127.0.0.1:5000/authors">all authors</a>
+{% endblock %}
